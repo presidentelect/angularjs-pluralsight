@@ -17,11 +17,11 @@
         };
 
         return {
-            getUser: getUser;
-            getRepos: getRepos;
+            getUser: getUser,
+            getRepos: getRepos,
         };
     };
 
     var module = angular.module("githubViewer");
-    module.factory("github", github);
+    module.factory("github", ["$http", github]);
 }());

@@ -9,8 +9,7 @@
 
     var onUserComplete = function (data) {
       $scope.user = data;
-      $http.get($scope.user.repos_url)
-        .then(onRepos, onError);
+      github.getRepos($scope.user).then(onRepos, onError);
     }
 
     var onRepos = function (response) {
@@ -54,6 +53,6 @@
   };
 
   app.controller("MainController",
-    ["$scope", "$http", "$interval", "$log", "$anchorScroll", "$location", MainController]);
+    ["$scope", "github", "$interval", "$log", "$anchorScroll", "$location", MainController]);
 
 }());
