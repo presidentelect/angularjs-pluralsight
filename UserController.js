@@ -10,8 +10,8 @@
             github.getRepos($scope.user).then(onRepos, onError);
         }
 
-        var onRepos = function (response) {
-            $scope.repos = response.data;
+        var onRepos = function (data) {
+            $scope.repos = data;
         };
 
         var onError = function (reason) {
