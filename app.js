@@ -16,7 +16,7 @@
                 templateUrl: "repo.html",
                 controller: "RepoController"
             })
-        //    .otherwise({ redirectTo: "/main" });
+            .otherwise({ redirectTo: "/main" });
     });
 
 }());
